@@ -7,7 +7,8 @@ namespace Mema {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-
+    namespace F = System::Windows::Forms;
+    
 	/// <summary>
 	/// Summary for MyForm
 	/// </summary>
@@ -37,8 +38,11 @@ namespace Mema {
     protected:
     private: System::Windows::Forms::Button^ button2;
     private: System::Windows::Forms::Button^ button3;
-    private: System::Windows::Forms::Button^ button4;
-    private: System::Windows::Forms::Button^ button5;
+
+
+
+
+
     private: System::Windows::Forms::Button^ button6;
     private: System::Windows::Forms::Button^ button7;
     private: System::Windows::Forms::Button^ button8;
@@ -65,7 +69,7 @@ namespace Mema {
     private: System::Windows::Forms::Button^ button30;
     private: System::Windows::Forms::Button^ button31;
     private: System::Windows::Forms::Button^ button32;
-    private: System::Windows::Forms::Button^ button33;
+
     private: System::Windows::Forms::Button^ button34;
     private: System::Windows::Forms::Button^ button35;
     private: System::Windows::Forms::Button^ button36;
@@ -115,7 +119,15 @@ namespace Mema {
     private: System::Windows::Forms::Button^ button80;
     private: System::Windows::Forms::Button^ button81;
     private: System::Windows::Forms::Button^ button82;
-	private: System::ComponentModel::IContainer^ components;
+private: System::Windows::Forms::CheckBox^ chkCapsL;
+private: System::Windows::Forms::CheckBox^ chkShiftL;
+private: System::Windows::Forms::Button^ button4;
+private: System::Windows::Forms::Button^ button5;
+private: System::Windows::Forms::Button^ button17;
+
+
+
+    private: System::ComponentModel::IContainer^ components;
 
 
 	protected:
@@ -137,8 +149,6 @@ namespace Mema {
             this->button1 = (gcnew System::Windows::Forms::Button());
             this->button2 = (gcnew System::Windows::Forms::Button());
             this->button3 = (gcnew System::Windows::Forms::Button());
-            this->button4 = (gcnew System::Windows::Forms::Button());
-            this->button5 = (gcnew System::Windows::Forms::Button());
             this->button6 = (gcnew System::Windows::Forms::Button());
             this->button7 = (gcnew System::Windows::Forms::Button());
             this->button8 = (gcnew System::Windows::Forms::Button());
@@ -165,7 +175,6 @@ namespace Mema {
             this->button30 = (gcnew System::Windows::Forms::Button());
             this->button31 = (gcnew System::Windows::Forms::Button());
             this->button32 = (gcnew System::Windows::Forms::Button());
-            this->button33 = (gcnew System::Windows::Forms::Button());
             this->button34 = (gcnew System::Windows::Forms::Button());
             this->button35 = (gcnew System::Windows::Forms::Button());
             this->button36 = (gcnew System::Windows::Forms::Button());
@@ -215,6 +224,11 @@ namespace Mema {
             this->button80 = (gcnew System::Windows::Forms::Button());
             this->button81 = (gcnew System::Windows::Forms::Button());
             this->button82 = (gcnew System::Windows::Forms::Button());
+            this->chkCapsL = (gcnew System::Windows::Forms::CheckBox());
+            this->chkShiftL = (gcnew System::Windows::Forms::CheckBox());
+            this->button4 = (gcnew System::Windows::Forms::Button());
+            this->button5 = (gcnew System::Windows::Forms::Button());
+            this->button17 = (gcnew System::Windows::Forms::Button());
             this->SuspendLayout();
             // 
             // button1
@@ -257,46 +271,13 @@ namespace Mema {
             this->button3->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->button3->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-            this->button3->Location = System::Drawing::Point(3, 106);
+            this->button3->Location = System::Drawing::Point(5, 106);
             this->button3->Name = L"button3";
             this->button3->Size = System::Drawing::Size(63, 56);
             this->button3->TabIndex = 2;
             this->button3->Text = L"Tab";
-            this->button3->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
             this->button3->UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this->button4->AllowDrop = true;
-            this->button4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-                static_cast<System::Int32>(static_cast<System::Byte>(64)));
-            this->button4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
-            this->button4->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->button4->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-            this->button4->Location = System::Drawing::Point(3, 168);
-            this->button4->Name = L"button4";
-            this->button4->Size = System::Drawing::Size(79, 56);
-            this->button4->TabIndex = 3;
-            this->button4->Text = L"Caps Lock  ⇥";
-            this->button4->UseVisualStyleBackColor = false;
-            this->button4->UseWaitCursor = true;
-            this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
-            // 
-            // button5
-            // 
-            this->button5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-                static_cast<System::Int32>(static_cast<System::Byte>(64)));
-            this->button5->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->button5->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-            this->button5->Location = System::Drawing::Point(3, 230);
-            this->button5->Name = L"button5";
-            this->button5->Size = System::Drawing::Size(105, 56);
-            this->button5->TabIndex = 4;
-            this->button5->Text = L"Shift  ↑";
-            this->button5->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-            this->button5->UseVisualStyleBackColor = false;
+            this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
             // 
             // button6
             // 
@@ -327,6 +308,7 @@ namespace Mema {
             this->button7->Text = L"f1";
             this->button7->TextAlign = System::Drawing::ContentAlignment::TopLeft;
             this->button7->UseVisualStyleBackColor = false;
+            this->button7->Click += gcnew System::EventHandler(this, &MyForm::button7_Click);
             // 
             // button8
             // 
@@ -342,6 +324,7 @@ namespace Mema {
             this->button8->Text = L"f2";
             this->button8->TextAlign = System::Drawing::ContentAlignment::TopLeft;
             this->button8->UseVisualStyleBackColor = false;
+            this->button8->Click += gcnew System::EventHandler(this, &MyForm::button8_Click);
             // 
             // button9
             // 
@@ -357,6 +340,7 @@ namespace Mema {
             this->button9->Text = L"f3";
             this->button9->TextAlign = System::Drawing::ContentAlignment::TopLeft;
             this->button9->UseVisualStyleBackColor = false;
+            this->button9->Click += gcnew System::EventHandler(this, &MyForm::button9_Click);
             // 
             // button10
             // 
@@ -372,6 +356,7 @@ namespace Mema {
             this->button10->Text = L"f4";
             this->button10->TextAlign = System::Drawing::ContentAlignment::TopLeft;
             this->button10->UseVisualStyleBackColor = false;
+            this->button10->Click += gcnew System::EventHandler(this, &MyForm::button10_Click);
             // 
             // button11
             // 
@@ -387,6 +372,7 @@ namespace Mema {
             this->button11->Text = L"f5";
             this->button11->TextAlign = System::Drawing::ContentAlignment::TopLeft;
             this->button11->UseVisualStyleBackColor = false;
+            this->button11->Click += gcnew System::EventHandler(this, &MyForm::button11_Click);
             // 
             // button12
             // 
@@ -402,6 +388,7 @@ namespace Mema {
             this->button12->Text = L"f6";
             this->button12->TextAlign = System::Drawing::ContentAlignment::TopLeft;
             this->button12->UseVisualStyleBackColor = false;
+            this->button12->Click += gcnew System::EventHandler(this, &MyForm::button12_Click);
             // 
             // button13
             // 
@@ -417,6 +404,7 @@ namespace Mema {
             this->button13->Text = L"f7";
             this->button13->TextAlign = System::Drawing::ContentAlignment::TopLeft;
             this->button13->UseVisualStyleBackColor = false;
+            this->button13->Click += gcnew System::EventHandler(this, &MyForm::button13_Click);
             // 
             // button14
             // 
@@ -432,6 +420,7 @@ namespace Mema {
             this->button14->Text = L"f8";
             this->button14->TextAlign = System::Drawing::ContentAlignment::TopLeft;
             this->button14->UseVisualStyleBackColor = false;
+            this->button14->Click += gcnew System::EventHandler(this, &MyForm::button14_Click);
             // 
             // button15
             // 
@@ -447,6 +436,7 @@ namespace Mema {
             this->button15->Text = L"f10";
             this->button15->TextAlign = System::Drawing::ContentAlignment::TopLeft;
             this->button15->UseVisualStyleBackColor = false;
+            this->button15->Click += gcnew System::EventHandler(this, &MyForm::button15_Click);
             // 
             // button16
             // 
@@ -462,6 +452,7 @@ namespace Mema {
             this->button16->Text = L"f11";
             this->button16->TextAlign = System::Drawing::ContentAlignment::TopLeft;
             this->button16->UseVisualStyleBackColor = false;
+            this->button16->Click += gcnew System::EventHandler(this, &MyForm::button16_Click);
             // 
             // button18
             // 
@@ -477,6 +468,7 @@ namespace Mema {
             this->button18->Text = L"f12";
             this->button18->TextAlign = System::Drawing::ContentAlignment::TopLeft;
             this->button18->UseVisualStyleBackColor = false;
+            this->button18->Click += gcnew System::EventHandler(this, &MyForm::button18_Click);
             // 
             // button19
             // 
@@ -492,6 +484,7 @@ namespace Mema {
             this->button19->Text = L"f9";
             this->button19->TextAlign = System::Drawing::ContentAlignment::TopLeft;
             this->button19->UseVisualStyleBackColor = false;
+            this->button19->Click += gcnew System::EventHandler(this, &MyForm::button19_Click);
             // 
             // button20
             // 
@@ -660,6 +653,7 @@ namespace Mema {
             this->button30->Text = L"_                  -";
             this->button30->TextAlign = System::Drawing::ContentAlignment::TopLeft;
             this->button30->UseVisualStyleBackColor = false;
+            this->button30->Click += gcnew System::EventHandler(this, &MyForm::button30_Click);
             // 
             // button31
             // 
@@ -690,20 +684,7 @@ namespace Mema {
             this->button32->Text = L"  ⟵       Backspace";
             this->button32->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
             this->button32->UseVisualStyleBackColor = false;
-            // 
-            // button33
-            // 
-            this->button33->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-                static_cast<System::Int32>(static_cast<System::Byte>(64)));
-            this->button33->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->button33->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-            this->button33->Location = System::Drawing::Point(891, 44);
-            this->button33->Name = L"button33";
-            this->button33->Size = System::Drawing::Size(63, 56);
-            this->button33->TabIndex = 32;
-            this->button33->Text = L"Home";
-            this->button33->UseVisualStyleBackColor = false;
+            this->button32->Click += gcnew System::EventHandler(this, &MyForm::button32_Click);
             // 
             // button34
             // 
@@ -714,11 +695,11 @@ namespace Mema {
             this->button34->ForeColor = System::Drawing::SystemColors::ControlLightLight;
             this->button34->Location = System::Drawing::Point(72, 106);
             this->button34->Name = L"button34";
-            this->button34->Size = System::Drawing::Size(55, 56);
+            this->button34->Size = System::Drawing::Size(61, 56);
             this->button34->TabIndex = 33;
             this->button34->Text = L"Q";
             this->button34->UseVisualStyleBackColor = false;
-            this->button34->Click += gcnew System::EventHandler(this, &MyForm::button34_Click);
+            this->button34->Click += gcnew System::EventHandler(this, &MyForm::AtoZ);
             // 
             // button35
             // 
@@ -729,10 +710,11 @@ namespace Mema {
             this->button35->ForeColor = System::Drawing::SystemColors::ControlLightLight;
             this->button35->Location = System::Drawing::Point(133, 106);
             this->button35->Name = L"button35";
-            this->button35->Size = System::Drawing::Size(55, 56);
+            this->button35->Size = System::Drawing::Size(61, 56);
             this->button35->TabIndex = 34;
             this->button35->Text = L"W";
             this->button35->UseVisualStyleBackColor = false;
+            this->button35->Click += gcnew System::EventHandler(this, &MyForm::AtoZ);
             // 
             // button36
             // 
@@ -743,11 +725,11 @@ namespace Mema {
             this->button36->ForeColor = System::Drawing::SystemColors::ControlLightLight;
             this->button36->Location = System::Drawing::Point(194, 106);
             this->button36->Name = L"button36";
-            this->button36->Size = System::Drawing::Size(55, 56);
+            this->button36->Size = System::Drawing::Size(61, 56);
             this->button36->TabIndex = 35;
             this->button36->Text = L"E";
             this->button36->UseVisualStyleBackColor = false;
-            this->button36->Click += gcnew System::EventHandler(this, &MyForm::button36_Click);
+            this->button36->Click += gcnew System::EventHandler(this, &MyForm::AtoZ);
             // 
             // button37
             // 
@@ -758,10 +740,11 @@ namespace Mema {
             this->button37->ForeColor = System::Drawing::SystemColors::ControlLightLight;
             this->button37->Location = System::Drawing::Point(255, 106);
             this->button37->Name = L"button37";
-            this->button37->Size = System::Drawing::Size(55, 56);
+            this->button37->Size = System::Drawing::Size(61, 56);
             this->button37->TabIndex = 36;
             this->button37->Text = L"R";
             this->button37->UseVisualStyleBackColor = false;
+            this->button37->Click += gcnew System::EventHandler(this, &MyForm::AtoZ);
             // 
             // button38
             // 
@@ -772,10 +755,11 @@ namespace Mema {
             this->button38->ForeColor = System::Drawing::SystemColors::ControlLightLight;
             this->button38->Location = System::Drawing::Point(316, 106);
             this->button38->Name = L"button38";
-            this->button38->Size = System::Drawing::Size(55, 56);
+            this->button38->Size = System::Drawing::Size(61, 56);
             this->button38->TabIndex = 37;
             this->button38->Text = L"T";
             this->button38->UseVisualStyleBackColor = false;
+            this->button38->Click += gcnew System::EventHandler(this, &MyForm::AtoZ);
             // 
             // button39
             // 
@@ -790,6 +774,7 @@ namespace Mema {
             this->button39->TabIndex = 38;
             this->button39->Text = L"Y";
             this->button39->UseVisualStyleBackColor = false;
+            this->button39->Click += gcnew System::EventHandler(this, &MyForm::AtoZ);
             // 
             // button40
             // 
@@ -804,6 +789,7 @@ namespace Mema {
             this->button40->TabIndex = 39;
             this->button40->Text = L"U";
             this->button40->UseVisualStyleBackColor = false;
+            this->button40->Click += gcnew System::EventHandler(this, &MyForm::AtoZ);
             // 
             // button41
             // 
@@ -818,6 +804,7 @@ namespace Mema {
             this->button41->TabIndex = 40;
             this->button41->Text = L"I";
             this->button41->UseVisualStyleBackColor = false;
+            this->button41->Click += gcnew System::EventHandler(this, &MyForm::AtoZ);
             // 
             // button42
             // 
@@ -832,6 +819,7 @@ namespace Mema {
             this->button42->TabIndex = 41;
             this->button42->Text = L"O";
             this->button42->UseVisualStyleBackColor = false;
+            this->button42->Click += gcnew System::EventHandler(this, &MyForm::AtoZ);
             // 
             // button43
             // 
@@ -846,6 +834,7 @@ namespace Mema {
             this->button43->TabIndex = 42;
             this->button43->Text = L"P";
             this->button43->UseVisualStyleBackColor = false;
+            this->button43->Click += gcnew System::EventHandler(this, &MyForm::AtoZ);
             // 
             // button44
             // 
@@ -891,6 +880,7 @@ namespace Mema {
             this->button46->Text = L"|     \r\n                \\";
             this->button46->TextAlign = System::Drawing::ContentAlignment::TopLeft;
             this->button46->UseVisualStyleBackColor = false;
+            this->button46->Click += gcnew System::EventHandler(this, &MyForm::button46_Click);
             // 
             // button47
             // 
@@ -899,12 +889,13 @@ namespace Mema {
             this->button47->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->button47->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-            this->button47->Location = System::Drawing::Point(891, 106);
+            this->button47->Location = System::Drawing::Point(891, 135);
             this->button47->Name = L"button47";
-            this->button47->Size = System::Drawing::Size(63, 56);
+            this->button47->Size = System::Drawing::Size(63, 27);
             this->button47->TabIndex = 46;
             this->button47->Text = L"pg up";
             this->button47->UseVisualStyleBackColor = false;
+            this->button47->Click += gcnew System::EventHandler(this, &MyForm::button47_Click);
             // 
             // button48
             // 
@@ -919,6 +910,7 @@ namespace Mema {
             this->button48->TabIndex = 47;
             this->button48->Text = L"A";
             this->button48->UseVisualStyleBackColor = false;
+            this->button48->Click += gcnew System::EventHandler(this, &MyForm::AtoZ);
             // 
             // button49
             // 
@@ -933,6 +925,7 @@ namespace Mema {
             this->button49->TabIndex = 48;
             this->button49->Text = L"S";
             this->button49->UseVisualStyleBackColor = false;
+            this->button49->Click += gcnew System::EventHandler(this, &MyForm::AtoZ);
             // 
             // button50
             // 
@@ -947,6 +940,7 @@ namespace Mema {
             this->button50->TabIndex = 49;
             this->button50->Text = L"D";
             this->button50->UseVisualStyleBackColor = false;
+            this->button50->Click += gcnew System::EventHandler(this, &MyForm::AtoZ);
             // 
             // button51
             // 
@@ -961,6 +955,7 @@ namespace Mema {
             this->button51->TabIndex = 50;
             this->button51->Text = L"F";
             this->button51->UseVisualStyleBackColor = false;
+            this->button51->Click += gcnew System::EventHandler(this, &MyForm::AtoZ);
             // 
             // button52
             // 
@@ -975,6 +970,7 @@ namespace Mema {
             this->button52->TabIndex = 51;
             this->button52->Text = L"G";
             this->button52->UseVisualStyleBackColor = false;
+            this->button52->Click += gcnew System::EventHandler(this, &MyForm::AtoZ);
             // 
             // button53
             // 
@@ -989,6 +985,7 @@ namespace Mema {
             this->button53->TabIndex = 52;
             this->button53->Text = L"H";
             this->button53->UseVisualStyleBackColor = false;
+            this->button53->Click += gcnew System::EventHandler(this, &MyForm::AtoZ);
             // 
             // button54
             // 
@@ -1003,6 +1000,7 @@ namespace Mema {
             this->button54->TabIndex = 53;
             this->button54->Text = L"J";
             this->button54->UseVisualStyleBackColor = false;
+            this->button54->Click += gcnew System::EventHandler(this, &MyForm::AtoZ);
             // 
             // button55
             // 
@@ -1017,6 +1015,7 @@ namespace Mema {
             this->button55->TabIndex = 54;
             this->button55->Text = L"K";
             this->button55->UseVisualStyleBackColor = false;
+            this->button55->Click += gcnew System::EventHandler(this, &MyForm::AtoZ);
             // 
             // button56
             // 
@@ -1031,6 +1030,7 @@ namespace Mema {
             this->button56->TabIndex = 55;
             this->button56->Text = L"L";
             this->button56->UseVisualStyleBackColor = false;
+            this->button56->Click += gcnew System::EventHandler(this, &MyForm::AtoZ);
             // 
             // button57
             // 
@@ -1076,6 +1076,7 @@ namespace Mema {
             this->button59->Text = L"↲                     Enter";
             this->button59->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
             this->button59->UseVisualStyleBackColor = false;
+            this->button59->Click += gcnew System::EventHandler(this, &MyForm::button59_Click);
             // 
             // button60
             // 
@@ -1090,6 +1091,7 @@ namespace Mema {
             this->button60->TabIndex = 59;
             this->button60->Text = L"pg dn";
             this->button60->UseVisualStyleBackColor = false;
+            this->button60->Click += gcnew System::EventHandler(this, &MyForm::button60_Click);
             // 
             // button61
             // 
@@ -1104,7 +1106,7 @@ namespace Mema {
             this->button61->TabIndex = 60;
             this->button61->Text = L"Z";
             this->button61->UseVisualStyleBackColor = false;
-            this->button61->Click += gcnew System::EventHandler(this, &MyForm::button61_Click);
+            this->button61->Click += gcnew System::EventHandler(this, &MyForm::AtoZ);
             // 
             // button62
             // 
@@ -1119,6 +1121,7 @@ namespace Mema {
             this->button62->TabIndex = 61;
             this->button62->Text = L"X";
             this->button62->UseVisualStyleBackColor = false;
+            this->button62->Click += gcnew System::EventHandler(this, &MyForm::AtoZ);
             // 
             // button63
             // 
@@ -1133,6 +1136,7 @@ namespace Mema {
             this->button63->TabIndex = 62;
             this->button63->Text = L"C";
             this->button63->UseVisualStyleBackColor = false;
+            this->button63->Click += gcnew System::EventHandler(this, &MyForm::AtoZ);
             // 
             // button64
             // 
@@ -1147,6 +1151,7 @@ namespace Mema {
             this->button64->TabIndex = 63;
             this->button64->Text = L"V";
             this->button64->UseVisualStyleBackColor = false;
+            this->button64->Click += gcnew System::EventHandler(this, &MyForm::AtoZ);
             // 
             // button65
             // 
@@ -1161,6 +1166,7 @@ namespace Mema {
             this->button65->TabIndex = 64;
             this->button65->Text = L"B";
             this->button65->UseVisualStyleBackColor = false;
+            this->button65->Click += gcnew System::EventHandler(this, &MyForm::AtoZ);
             // 
             // button66
             // 
@@ -1175,6 +1181,7 @@ namespace Mema {
             this->button66->TabIndex = 65;
             this->button66->Text = L"N";
             this->button66->UseVisualStyleBackColor = false;
+            this->button66->Click += gcnew System::EventHandler(this, &MyForm::AtoZ);
             // 
             // button67
             // 
@@ -1189,6 +1196,7 @@ namespace Mema {
             this->button67->TabIndex = 66;
             this->button67->Text = L"M";
             this->button67->UseVisualStyleBackColor = false;
+            this->button67->Click += gcnew System::EventHandler(this, &MyForm::AtoZ);
             // 
             // button68
             // 
@@ -1263,6 +1271,7 @@ namespace Mema {
             this->button72->TabIndex = 71;
             this->button72->Text = L"end";
             this->button72->UseVisualStyleBackColor = false;
+            this->button72->Click += gcnew System::EventHandler(this, &MyForm::button72_Click);
             // 
             // button73
             // 
@@ -1363,6 +1372,7 @@ namespace Mema {
             this->button79->TabIndex = 78;
             this->button79->Text = L"︿";
             this->button79->UseVisualStyleBackColor = false;
+            this->button79->Click += gcnew System::EventHandler(this, &MyForm::button79_Click);
             // 
             // button80
             // 
@@ -1393,6 +1403,7 @@ namespace Mema {
             this->button81->TabIndex = 80;
             this->button81->Text = L"〉";
             this->button81->UseVisualStyleBackColor = false;
+            this->button81->Click += gcnew System::EventHandler(this, &MyForm::button81_Click);
             // 
             // button82
             // 
@@ -1407,6 +1418,83 @@ namespace Mema {
             this->button82->TabIndex = 81;
             this->button82->Text = L"Space";
             this->button82->UseVisualStyleBackColor = false;
+            this->button82->Click += gcnew System::EventHandler(this, &MyForm::button82_Click);
+            // 
+            // chkCapsL
+            // 
+            this->chkCapsL->Appearance = System::Windows::Forms::Appearance::Button;
+            this->chkCapsL->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+                static_cast<System::Int32>(static_cast<System::Byte>(64)));
+            this->chkCapsL->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->chkCapsL->ForeColor = System::Drawing::SystemColors::ControlLightLight;
+            this->chkCapsL->Location = System::Drawing::Point(5, 168);
+            this->chkCapsL->Name = L"chkCapsL";
+            this->chkCapsL->Size = System::Drawing::Size(77, 56);
+            this->chkCapsL->TabIndex = 83;
+            this->chkCapsL->Text = L"Caps Lock";
+            this->chkCapsL->UseVisualStyleBackColor = false;
+            this->chkCapsL->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chkCapsL_CheckedChanged);
+            // 
+            // chkShiftL
+            // 
+            this->chkShiftL->Appearance = System::Windows::Forms::Appearance::Button;
+            this->chkShiftL->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+                static_cast<System::Int32>(static_cast<System::Byte>(64)));
+            this->chkShiftL->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->chkShiftL->ForeColor = System::Drawing::SystemColors::ControlLightLight;
+            this->chkShiftL->Location = System::Drawing::Point(5, 230);
+            this->chkShiftL->Name = L"chkShiftL";
+            this->chkShiftL->Size = System::Drawing::Size(103, 56);
+            this->chkShiftL->TabIndex = 85;
+            this->chkShiftL->Text = L"Shift  ↑";
+            this->chkShiftL->UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this->button4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+                static_cast<System::Int32>(static_cast<System::Byte>(64)));
+            this->button4->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->button4->ForeColor = System::Drawing::SystemColors::ControlLightLight;
+            this->button4->Location = System::Drawing::Point(891, 106);
+            this->button4->Name = L"button4";
+            this->button4->Size = System::Drawing::Size(63, 29);
+            this->button4->TabIndex = 87;
+            this->button4->Text = L"insert";
+            this->button4->UseVisualStyleBackColor = false;
+            this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click_1);
+            // 
+            // button5
+            // 
+            this->button5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+                static_cast<System::Int32>(static_cast<System::Byte>(64)));
+            this->button5->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->button5->ForeColor = System::Drawing::SystemColors::ControlLightLight;
+            this->button5->Location = System::Drawing::Point(891, 73);
+            this->button5->Name = L"button5";
+            this->button5->Size = System::Drawing::Size(63, 27);
+            this->button5->TabIndex = 88;
+            this->button5->Text = L"delete";
+            this->button5->UseVisualStyleBackColor = false;
+            this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
+            // 
+            // button17
+            // 
+            this->button17->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+                static_cast<System::Int32>(static_cast<System::Byte>(64)));
+            this->button17->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->button17->ForeColor = System::Drawing::SystemColors::ControlLightLight;
+            this->button17->Location = System::Drawing::Point(891, 44);
+            this->button17->Name = L"button17";
+            this->button17->Size = System::Drawing::Size(63, 29);
+            this->button17->TabIndex = 90;
+            this->button17->Text = L"prt sc";
+            this->button17->UseVisualStyleBackColor = false;
+            this->button17->Click += gcnew System::EventHandler(this, &MyForm::button17_Click);
             // 
             // MyForm
             // 
@@ -1414,7 +1502,12 @@ namespace Mema {
             this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Dpi;
             this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
             this->BackColor = System::Drawing::SystemColors::AppWorkspace;
-            this->ClientSize = System::Drawing::Size(962, 388);
+            this->ClientSize = System::Drawing::Size(964, 355);
+            this->Controls->Add(this->button17);
+            this->Controls->Add(this->button5);
+            this->Controls->Add(this->button4);
+            this->Controls->Add(this->chkShiftL);
+            this->Controls->Add(this->chkCapsL);
             this->Controls->Add(this->button82);
             this->Controls->Add(this->button81);
             this->Controls->Add(this->button80);
@@ -1464,7 +1557,6 @@ namespace Mema {
             this->Controls->Add(this->button36);
             this->Controls->Add(this->button35);
             this->Controls->Add(this->button34);
-            this->Controls->Add(this->button33);
             this->Controls->Add(this->button32);
             this->Controls->Add(this->button31);
             this->Controls->Add(this->button30);
@@ -1491,23 +1583,30 @@ namespace Mema {
             this->Controls->Add(this->button8);
             this->Controls->Add(this->button7);
             this->Controls->Add(this->button6);
-            this->Controls->Add(this->button5);
-            this->Controls->Add(this->button4);
             this->Controls->Add(this->button3);
             this->Controls->Add(this->button2);
             this->Controls->Add(this->button1);
             this->ForeColor = System::Drawing::SystemColors::ControlText;
             this->IsMdiContainer = true;
-            this->MaximizeBox = false;
-            this->MinimizeBox = false;
             this->Name = L"MyForm";
             this->ShowIcon = false;
             this->TopMost = true;
             this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
+            this->Click += gcnew System::EventHandler(this, &MyForm::AtoZ);
             this->ResumeLayout(false);
 
         }
 #pragma endregion
+        protected:
+            virtual property F::CreateParams^ CreateParams
+            {
+                F::CreateParams^ get() override
+                {
+                    F::CreateParams^ param = __super::CreateParams;
+                    param->ExStyle |= 0x08000000;
+                    return param;
+                }
+            }
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1519,19 +1618,129 @@ private: System::Void checkBox1_CheckedChanged(System::Object^ sender, System::E
 private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+   
 }
 private: System::Void button26_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void button78_Click(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send("LEFT");
 }
 private: System::Void button61_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void button80_Click(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send("DOWN");
 }
 private: System::Void button36_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void button34_Click(System::Object^ sender, System::EventArgs^ e) {
   
+}
+private: System::Void button82_Click(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send(" ");
+}
+private: System::Void button59_Click(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send("{ENTER}");
+}
+private: System::Void button46_Click(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send("{DIVIDE}");
+}
+private: System::Void button30_Click(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send("{SUBTRACT}");
+}
+       void InitializeEventHandlers() {
+           this->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &MyForm::Form1_KeyDown);
+           this->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &MyForm::Form1_KeyUp);
+       }
+private:
+    bool isCapsLockActive = false;
+    System::Void Form1_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
+        if (e->KeyCode == Keys::CapsLock) {
+            isCapsLockActive = !isCapsLockActive; 
+            chkCapsL->Checked = isCapsLockActive; 
+        }
+    }
+    System::Void Form1_KeyUp(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
+        
+    }
+private: System::Void AtoZ(System::Object^ sender, System::EventArgs^ e) {
+    Button^ b = safe_cast<Button^>(sender);
+    if (chkCapsL->Checked == true || chkShiftL->Checked == true) {
+        SendKeys::Send((b->Text)->ToUpper());
+        chkShiftL->Checked = false;
+    }else{
+        SendKeys::Send( (b->Text)->ToLower ());
+    }
+}
+private: System::Void button32_Click(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send("{BKSP}");
+}
+private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send("{F1}");
+}
+private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send("{F2}");
+}
+private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send("{F3}");
+}
+private: System::Void button10_Click(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send("{F4}");
+}
+private: System::Void button11_Click(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send("{f5}");
+}
+private: System::Void button12_Click(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send("{F6}");
+}
+private: System::Void button13_Click(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send("{F7}");
+}
+private: System::Void button14_Click(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send("{F8}");
+}
+private: System::Void button19_Click(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send("{F9}");
+}
+private: System::Void button15_Click(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send("{F10}");
+}
+private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send("{F11}");
+}
+private: System::Void button18_Click(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send("{F12}");
+}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send("{TAB}");
+}
+private: System::Void button17_Click(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send("{PRTSC}");
+}
+private: System::Void button60_Click(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send("PGDN");
+}
+private: System::Void button47_Click(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send("PGUP");
+}
+private: System::Void button4_Click_1(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send("INSERT");
+}
+private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send("DELETE");
+}
+private: System::Void button72_Click(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send("END");
+}
+private: System::Void button81_Click(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send("RIGHT");
+}
+private: System::Void button79_Click(System::Object^ sender, System::EventArgs^ e) {
+    SendKeys::Send("UP");
+}
+private: System::Void chkShiftLock_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void chkCapsL_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+
 }
 };
 }

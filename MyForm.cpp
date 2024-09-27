@@ -15,4 +15,3 @@ void Main(array<String^>^args) {
     Mema::MyForm form;
     Application::Run(% form); // Replace "MyForm" with your actual form class name
 }
-

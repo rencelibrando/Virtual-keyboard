@@ -1359,7 +1359,7 @@ namespace Mema {
             this->button79->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
             this->button79->Location = System::Drawing::Point(830, 292);
             this->button79->Name = L"button79";
-            this->button79->Size = System::Drawing::Size(55, 23);
+            this->button79->Size = System::Drawing::Size(55, 27);
             this->button79->TabIndex = 78;
             this->button79->Text = L"︿";
             this->button79->UseVisualStyleBackColor = false;
@@ -1371,9 +1371,9 @@ namespace Mema {
             this->button80->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->button80->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-            this->button80->Location = System::Drawing::Point(830, 325);
+            this->button80->Location = System::Drawing::Point(830, 318);
             this->button80->Name = L"button80";
-            this->button80->Size = System::Drawing::Size(55, 23);
+            this->button80->Size = System::Drawing::Size(55, 30);
             this->button80->TabIndex = 79;
             this->button80->Text = L"﹀";
             this->button80->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
@@ -1414,7 +1414,7 @@ namespace Mema {
             this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Dpi;
             this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
             this->BackColor = System::Drawing::SystemColors::AppWorkspace;
-            this->ClientSize = System::Drawing::Size(962, 358);
+            this->ClientSize = System::Drawing::Size(962, 388);
             this->Controls->Add(this->button82);
             this->Controls->Add(this->button81);
             this->Controls->Add(this->button80);

@@ -107,7 +107,10 @@ namespace Mema {
     private: System::Windows::Forms::Button^ button68;
     private: System::Windows::Forms::Button^ button69;
     private: System::Windows::Forms::Button^ button70;
-    private: System::Windows::Forms::Button^ button71;
+
+
+
+
     private: System::Windows::Forms::Button^ button72;
     private: System::Windows::Forms::Button^ button73;
     private: System::Windows::Forms::Button^ button74;
@@ -121,9 +124,14 @@ namespace Mema {
     private: System::Windows::Forms::Button^ button82;
 private: System::Windows::Forms::CheckBox^ chkCapsL;
 private: System::Windows::Forms::CheckBox^ chkShiftL;
+
+
+
 private: System::Windows::Forms::Button^ button4;
 private: System::Windows::Forms::Button^ button5;
 private: System::Windows::Forms::Button^ button17;
+private: System::Windows::Forms::CheckBox^ chkShiftR;
+
 
 
 
@@ -212,7 +220,6 @@ private: System::Windows::Forms::Button^ button17;
             this->button68 = (gcnew System::Windows::Forms::Button());
             this->button69 = (gcnew System::Windows::Forms::Button());
             this->button70 = (gcnew System::Windows::Forms::Button());
-            this->button71 = (gcnew System::Windows::Forms::Button());
             this->button72 = (gcnew System::Windows::Forms::Button());
             this->button73 = (gcnew System::Windows::Forms::Button());
             this->button74 = (gcnew System::Windows::Forms::Button());
@@ -229,6 +236,7 @@ private: System::Windows::Forms::Button^ button17;
             this->button4 = (gcnew System::Windows::Forms::Button());
             this->button5 = (gcnew System::Windows::Forms::Button());
             this->button17 = (gcnew System::Windows::Forms::Button());
+            this->chkShiftR = (gcnew System::Windows::Forms::CheckBox());
             this->SuspendLayout();
             // 
             // button1
@@ -262,7 +270,6 @@ private: System::Windows::Forms::Button^ button17;
             this->button2->Text = L"~    \r\n    `";
             this->button2->TextAlign = System::Drawing::ContentAlignment::TopLeft;
             this->button2->UseVisualStyleBackColor = false;
-            this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
             // 
             // button3
             // 
@@ -500,6 +507,7 @@ private: System::Windows::Forms::Button^ button17;
             this->button20->Text = L"!                   1";
             this->button20->TextAlign = System::Drawing::ContentAlignment::TopLeft;
             this->button20->UseVisualStyleBackColor = false;
+            this->button20->Click += gcnew System::EventHandler(this, &MyForm::button20_Click_1);
             // 
             // button21
             // 
@@ -515,6 +523,7 @@ private: System::Windows::Forms::Button^ button17;
             this->button21->Text = L"@                2";
             this->button21->TextAlign = System::Drawing::ContentAlignment::TopLeft;
             this->button21->UseVisualStyleBackColor = false;
+            this->button21->Click += gcnew System::EventHandler(this, &MyForm::button21_Click);
             // 
             // button22
             // 
@@ -591,7 +600,6 @@ private: System::Windows::Forms::Button^ button17;
             this->button26->Text = L"&                    7";
             this->button26->TextAlign = System::Drawing::ContentAlignment::TopLeft;
             this->button26->UseVisualStyleBackColor = false;
-            this->button26->Click += gcnew System::EventHandler(this, &MyForm::button26_Click);
             // 
             // button27
             // 
@@ -607,7 +615,6 @@ private: System::Windows::Forms::Button^ button17;
             this->button27->Text = L"*                 8";
             this->button27->TextAlign = System::Drawing::ContentAlignment::TopLeft;
             this->button27->UseVisualStyleBackColor = false;
-            this->button27->Click += gcnew System::EventHandler(this, &MyForm::button27_Click);
             // 
             // button28
             // 
@@ -653,7 +660,6 @@ private: System::Windows::Forms::Button^ button17;
             this->button30->Text = L"_                  -";
             this->button30->TextAlign = System::Drawing::ContentAlignment::TopLeft;
             this->button30->UseVisualStyleBackColor = false;
-            this->button30->Click += gcnew System::EventHandler(this, &MyForm::button30_Click);
             // 
             // button31
             // 
@@ -1243,21 +1249,6 @@ private: System::Windows::Forms::Button^ button17;
             this->button70->TextAlign = System::Drawing::ContentAlignment::TopLeft;
             this->button70->UseVisualStyleBackColor = false;
             // 
-            // button71
-            // 
-            this->button71->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-                static_cast<System::Int32>(static_cast<System::Byte>(64)));
-            this->button71->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->button71->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-            this->button71->ImageAlign = System::Drawing::ContentAlignment::MiddleRight;
-            this->button71->Location = System::Drawing::Point(724, 230);
-            this->button71->Name = L"button71";
-            this->button71->Size = System::Drawing::Size(161, 56);
-            this->button71->TabIndex = 70;
-            this->button71->Text = L"↑  Shift";
-            this->button71->UseVisualStyleBackColor = false;
-            // 
             // button72
             // 
             this->button72->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
@@ -1496,6 +1487,23 @@ private: System::Windows::Forms::Button^ button17;
             this->button17->UseVisualStyleBackColor = false;
             this->button17->Click += gcnew System::EventHandler(this, &MyForm::button17_Click);
             // 
+            // chkShiftR
+            // 
+            this->chkShiftR->Appearance = System::Windows::Forms::Appearance::Button;
+            this->chkShiftR->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+                static_cast<System::Int32>(static_cast<System::Byte>(64)));
+            this->chkShiftR->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->chkShiftR->ForeColor = System::Drawing::SystemColors::ControlLightLight;
+            this->chkShiftR->Location = System::Drawing::Point(724, 230);
+            this->chkShiftR->Name = L"chkShiftR";
+            this->chkShiftR->Size = System::Drawing::Size(161, 56);
+            this->chkShiftR->TabIndex = 92;
+            this->chkShiftR->Text = L"Shift  ↑";
+            this->chkShiftR->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+            this->chkShiftR->UseVisualStyleBackColor = false;
+            this->chkShiftR->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBox1_CheckedChanged_1);
+            // 
             // MyForm
             // 
             this->AutoScaleDimensions = System::Drawing::SizeF(96, 96);
@@ -1503,6 +1511,7 @@ private: System::Windows::Forms::Button^ button17;
             this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
             this->BackColor = System::Drawing::SystemColors::AppWorkspace;
             this->ClientSize = System::Drawing::Size(964, 355);
+            this->Controls->Add(this->chkShiftR);
             this->Controls->Add(this->button17);
             this->Controls->Add(this->button5);
             this->Controls->Add(this->button4);
@@ -1519,7 +1528,6 @@ private: System::Windows::Forms::Button^ button17;
             this->Controls->Add(this->button74);
             this->Controls->Add(this->button73);
             this->Controls->Add(this->button72);
-            this->Controls->Add(this->button71);
             this->Controls->Add(this->button70);
             this->Controls->Add(this->button69);
             this->Controls->Add(this->button68);
@@ -1664,9 +1672,10 @@ private:
     }
 private: System::Void AtoZ(System::Object^ sender, System::EventArgs^ e) {
     Button^ b = safe_cast<Button^>(sender);
-    if (chkCapsL->Checked == true || chkShiftL->Checked == true) {
+    if (chkCapsL->Checked == true || chkShiftL->Checked == true || chkShiftR->Checked == true) {
         SendKeys::Send((b->Text)->ToUpper());
         chkShiftL->Checked = false;
+        chkShiftR->Checked = false;
     }else{
         SendKeys::Send( (b->Text)->ToLower ());
     }
@@ -1741,6 +1750,34 @@ private: System::Void chkShiftLock_Click(System::Object^ sender, System::EventAr
 }
 private: System::Void chkCapsL_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
 
+}
+private: System::Void button20_Click(System::Object^ sender, System::EventArgs^ e) {
+    
+}
+private: System::Void button71_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void checkBox1_CheckedChanged_1(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button20_Click_1(System::Object^ sender, System::EventArgs^ e) {
+    if (chkCapsL->Checked == true || chkShiftL->Checked == true || chkShiftR->Checked == true) {
+        SendKeys::Send("{!}");
+        chkShiftL->Checked = false;
+        chkShiftR->Checked = false;
+
+    }
+    else{
+        SendKeys::Send("{1}");
+    }
+}
+private: System::Void button21_Click(System::Object^ sender, System::EventArgs^ e) {
+    if (chkCapsL->Checked == true || chkShiftL->Checked == true || chkShiftR->Checked == true) {
+        SendKeys::Send("{''}");
+        chkShiftL->Checked = false;
+        chkShiftR->Checked = false;
+    }
+    else {
+        SendKeys::Send("{2}");
+    }
 }
 };
 }
